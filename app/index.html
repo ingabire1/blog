@@ -13,17 +13,17 @@
 {% if title %}
 <title> {{ title }}</title>
 {% else %}
-<title> Welcome to 60 seconds pitch</title>
+<title> Welcome to Blog Application</title>
 {% endif %}
 
 {%block content %}
-<h1 id="big">60 SECONDS PITCH</h1>
+<h1 id="big">Blog App</h1>
 
 
 <div class="container">
 
-    {{ macro.displayPitches(pitches)}}<br>
-    <a href="/pitch/new" class="btn btn-primary">Add Pitch</a>
+    {{ macro.displayblog(blogs)}}<br>
+    <a href="/blog/new" class="btn btn-primary">Add Blog</a>
 </div>
 
 

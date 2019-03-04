@@ -37,49 +37,49 @@ def load_user(user_id):
     return User.query.get(int(user_id))
 
 
-class Pitch(db.Model):
-   __tablename__ = 'pitches'
+class quote(db.Model):
+   __tablename__ = 'quotes'
 
    id = db.Column(db.Integer,primary_key = True)
    user_id= db.Column(db.Integer,db.ForeignKey('users.id'))
    content = db.Column(db.String(255))
    comments = db.relationship('Comment',backref='pitch' ,lazy='dynamic')
    category = db.Column(db.String(255))
-   upvotes = db.Column(db.Integer)
-   downvotes = db.Column(db.Integer)
+#    upvotes = db.Column(db.Integer)
+#    downvotes = db.Column(db.Integer)
 
 
-   def save_pitch(self):
+   def save_quote(self):
         db.session.add(self)
         db.session.commit()
 
    @classmethod
-   def clear_pitches(cls):
-        Pitch.all_pitches.clear()
+   def clear_quote(cls):
+        quote.all_quotes.clear()
 
    @classmethod
-   def get_pitche(cls,id):
-        pitche = Pitch.query.filter_by(id=id).all()
-        return pitche
+   def get_quote(cls,id):
+        quote = quote.query.filter_by(id=id).all()
+        return quote
     
    @classmethod
-   def get_pitches(cls):
-       pitches = Pitch.query.filter_by().all()
-       return pitches
+   def get_quotes(cls):
+       quotes = quote.query.filter_by().all()
+       return quotes
 
-   @classmethod
-   def upvotess(cls,id):
-       pitch=Pitch.query.filter_by(id=id).first()
-       pitch.upvotes=0
-       upvotes=pitch.upvotes+1
-       return upvotes
+#    @classmethod
+#    def upvotess(cls,id):
+#        pitch=Pitch.query.filter_by(id=id).first()
+#        pitch.upvotes=0
+#        upvotes=pitch.upvotes+1
+#        return upvotes
 
-   @classmethod
-   def downvotess(cls,id):
-       pitch=Pitch.query.filter_by(id=id).first()
-       pitch.downvotes=0
-       downvotes=pitch.downvotes-1
-       return downvotes
+#    @classmethod
+#    def downvotess(cls,id):
+#        pitch=Pitch.query.filter_by(id=id).first()
+#        pitch.downvotes=0
+#        downvotes=pitch.downvotes-1
+#        return downvotes
 
 
 
