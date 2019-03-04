@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro%}
+{{ fontawesome_html() }}
+<!-- {% import "bootstrap/wtf.html" as wtf %} -->
+
+<!-- Styles block -->
+
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+<!-- Content block -->
+{% if title %}
+<title> {{ title }}</title>
+{% else %}
+<title> Welcome to 60 seconds pitch</title>
+{% endif %}
+
+{%block content %}
+<h1 id="big">60 SECONDS PITCH</h1>
+
+
+<div class="container">
+
+    {{ macro.displayPitches(pitches)}}<br>
+    <a href="/pitch/new" class="btn btn-primary">Add Pitch</a>
+</div>
+
+
+{% endblock %}
