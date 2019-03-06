@@ -12,7 +12,7 @@ class UpdateProfile(FlaskForm):
     bio = TextAreaField('Tell us about you.',validators = [Required()])
     submit = SubmitField('Submit')
 
-class AddPitchForm(FlaskForm):
+class AddBlogForm(FlaskForm):
     category= SelectField('Category:',choices=[('blog posts','comment blog'),('recent posts','quotes'),('update','delete blog')])
     content=TextAreaField('Blog',validators = [Required()])
     submit=SubmitField('SUBMIT')
