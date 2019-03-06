@@ -1,0 +1,32 @@
+{% extends 'base.html'%}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles%}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+{% endblock %}
+
+{% block content %}
+<div class="container" id="quote">
+    <h1>WELCOME TO BLOGZ WEBSITE</h1><br><br>
+
+
+    <div class="well">
+        <h2>Quotes</h2>
+        <h3>{{quote.content}}</h3>
+        <p>{{quote.author}}</p>
+    </div>
+    <div class=well id="post">
+        {% for kigali in blog %}
+
+        <h4>{{kigali.title}}</h4><br><br>
+        <p>{{kigali.blog_post}}</p>
+
+        <button> <a href="/comment/new/{{kigali.id}}">comment</a></button>
+        <button><a href="{{url_for('main.update_post',id=kigali.id)}}">Update</button></a>
+        <button> <a href="{{url_for('main.delete_blog',id=kigali.id)}}">Delete Blog</a></button>
+
+
+        {%endfor%}
+    </div>
+</div>
+{% endblock%}
