@@ -2,8 +2,8 @@ import os
 
 class Config:
     QUOTE_API_BASE_URL='http://quotes.stormconsultancy.co.uk/random.json'
-    SECRET_KEY = os.environ.get('SECRET_KEY')
-    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:cycy1234@localhost/blloogz'
+    SECRET_KEY = '65897'
+    SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://wecode:54321@localhost/blog'
     
 #  email configurations
     MAIL_SERVER = 'smtp.googlemail.com'

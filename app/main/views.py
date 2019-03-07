@@ -19,6 +19,7 @@ def index():
     
     title = 'Home'
     return render_template('index.html', title = title,blog=blog,quote=quote)
+    # return render_template("profile/profile.html", user = user)
 
 @main.route('/user/<uname>')
 def profile(uname):

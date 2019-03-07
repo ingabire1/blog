@@ -3,12 +3,7 @@ Blog App
  Developed by Ingabire Aimee Sylvie on March 6st, 2019
 
 Description
-Blog is a web application where user can post the quote and see the blogs.and can subscribes to get the latest updates on post. Users can subscribe to the blog to get the latest updates on articles.The blog supports comments from readers and blog writers can determine whether to delete the comments or not. Users can also delete blog posts at their discretion.After the writer has posted a new blog post, subscribers will receive an email notification with a link to the blog post.
-
-Specifications
-user can view blogs click on article and view the whole blog post. and it display the whole blogs. user can write comments on the comment test area box.the name also is required.then the comment is displayed on the blog content. you fill subscription form that user can receive a subscription confirmation email.
-
-writer can add blog, delete and update blogs and delete comments
+A web application where one can start blogs and users can comment on the topic or start a blog of their own. user can view blogs click on article and view the whole blog post. and it display the whole blogs. user can write comments on the comment test area box.the name also is required.then the comment is displayed on the blog content. you fill subscription form that user can receive a subscription confirmation email. we can also writte and  add blog, delete and update blogs and delete comments
 
 Set-up and Installation
 Prerequiites
@@ -55,3 +50,9 @@ Contact me on ingabire.sylvie@gmail.com for any support want.
 
 License
 MIT Copyright (c) 2019 Ingabire Aimee Sylvie
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

@@ -1,5 +1,4 @@
 Hello {{user.username}}
-Congratulations!
 
 You have subscribed to blog.!
 
@@ -8,3 +7,4 @@ You will now receive updates on new blogs as soon as they are posted
 Sincerely,
 
  Blog Team
+ 

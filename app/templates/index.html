@@ -1,0 +1,28 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block content %}
+{{ super() }}
+<link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+
+<div class="container" id="quote">
+    <h1>WELCOME TO BLOG APP</h1><br><br>
+
+
+    <div class="well">
+        <h2>Quotes</h2>
+        <h3>{{quote.content}}</h3>
+        <p>{{quote.author}}</p>
+    </div>
+    <div class=well id="post">
+        {%for blog in blog%}
+        <h4>{{blog.title}}</h4><br><br>
+        <p>{{blog.blog_post}}</p>
+
+        <button> <a href="/comment/new/{{blog.id}}">comment</a></button>
+        <button><a href="{{url_for('main.update_post',id=blog.id)}}">Update</button></a>
+        <button> <a href="{{url_for('main.delete_blog',id=blog.id)}}">Delete Blog</a></button>
+        {% endfor%}
+    </div>
+</div>
+{% endblock%}
